@@ -29,10 +29,10 @@ function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
 
-            if (color === "green"){
+            if (letterColor === "green"){
                 return
             } else {
-                if (color === "yellow"){
+                if (letterColor === "yellow"){
                     return
                 }
             } else {

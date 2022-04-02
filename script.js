@@ -76,7 +76,7 @@ function checkGuess() {
             rightGuess[letterPosition] = "#"
         }  
 
-        let delay = 250 * i
+        let delay = 350 * i
         setTimeout(()=> {
             //flip box
             animateCSS(box, 'flipInX')

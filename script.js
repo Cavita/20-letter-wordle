@@ -35,7 +35,7 @@ function shadeKeyBoard(letter, color) {
     }
 }
 
-function checkGuess () {
+function checkGuess() {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)

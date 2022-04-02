@@ -8,7 +8,8 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
 
 function initBoard() {
     document.getElementById("rightguessString").innerHTML = rightGuessString
-    
+    document.getElementById("guessString").innerHTML = guessString
+
     let board = document.getElementById("game-board");
 
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
@@ -40,7 +41,7 @@ function checkGuess () {
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)
 
-    document.getElementById("guessString").innerHTML = guessString
+    
     
     for (const val of currentGuess) {
         guessString += val

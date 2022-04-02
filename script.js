@@ -49,7 +49,7 @@ function checkGuess () {
         return
     }
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; guessString.length; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]
@@ -157,7 +157,6 @@ document.addEventListener("keyup", (e) => {
 
     if (pressedKey === "Enter") {
         checkGuess()
-        document.getElementById("rightguessString").innerHTML = string(currentGuess)
         return
     }
 

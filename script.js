@@ -35,7 +35,7 @@ function shadeKeyBoard(letter, color) {
     }
 }
 
-function checkGuess() {
+function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)
@@ -94,7 +94,7 @@ function checkGuess() {
     }
 }
 
-function insertLetter(pressedKey) {
+function insertLetter (pressedKey) {
     if (nextLetter === 20) {
         return
     }
@@ -109,7 +109,7 @@ function insertLetter(pressedKey) {
     nextLetter += 1;
 }
 
-function deleteLetter() {
+function deleteLetter () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let box = row.children[nextLetter - 1]
     box.textContent = ""

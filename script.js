@@ -13,7 +13,7 @@ function initBoard() {
         let row = document.createElement("div")
         row.className = "letter-row"
         
-        for (let j = 0; j < 5; j++) {
+        for (let j = 0; j < 20; j++) {
             let box = document.createElement("div")
             box.className = "letter-box"
             row.appendChild(box)

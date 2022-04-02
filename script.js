@@ -49,7 +49,9 @@ function checkGuess () {
         return
     }
     
-    for (let i = 0; i < 21; i++) {
+    console.log(guessString)
+
+    for (let i = 0; i < 20; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]

@@ -102,10 +102,6 @@ function checkGuess() {
             toastr.info(`The right word was: "${rightGuessString}"`)
         }
     }
-
-    console.log(answerString)
-    console.log(guessString)
-    console.log(currentGuess)
 };
 
 function insertLetter(pressedKey) {
@@ -191,5 +187,14 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
 });
+
+function shareresults() {
+    for (let i = 0; i < 5; i++) {
+        for (j = 0; j <20; j++) {
+            let letterColor = ''
+            let box = row.children[i]
+        }
+    }
+}
 
 initBoard();

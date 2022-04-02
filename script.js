@@ -55,22 +55,18 @@ function checkGuess() {
         let letter = currentGuess[i]
         
         let letterPosition = rightGuess.indexOf(currentGuess[i])
-            // now, letter is definitely in word
-            // if letter index and right guess index are the same
-            // letter is in the right position 
-            if (letterPosition === -1) {
+        //checks if letter is in the word. Greys out box if not found.
+        if (letterPosition === -1) {
                 letterColor = 'grey'
-            } else {
+        } else {
             if (currentGuess[i] === rightGuess[i]) {
-                // shade green 
                 letterColor = 'green'
             } else {
-                // shade box yellow
                 letterColor = 'yellow'
             }
 
             rightGuess[letterPosition] = "#"
-        }
+        }  
 
         let delay = 250 * i
         setTimeout(()=> {

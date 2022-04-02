@@ -29,13 +29,17 @@ function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
 
-            if (letterColor === "green"){
+            let oldColor = elem.style.backgroundColor
+            if (oldColor === 'green') {
                 return
-            } else {
-                if (letterColor === "yellow"){
-                    return
-                }
             } 
+
+            if (oldColor === 'yellow' && color !== 'green') {
+                return
+            }
+
+            elem.style.backgroundColor = color
+            break
         }
     }
 };
@@ -47,6 +51,7 @@ function checkGuess() {
 
     for (const val of currentGuess) {
         guessString += val
+        toastr.info(guessString)
     }
 
     if (guessString.length != 20) {
@@ -72,7 +77,7 @@ function checkGuess() {
 
         }  
 
-        let delay = 350 * i
+        let delay = 300 * i
         setTimeout(()=> {
             //flip box
             animateCSS(box, 'flipInX')

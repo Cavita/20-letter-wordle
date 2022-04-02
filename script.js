@@ -59,7 +59,7 @@ function checkGuess () {
         guessString += val
     }
 
-    if (guessString.length != 5) {
+    if (guessString.length != 20) {
         toastr.error("Not enough letters!")
         return
     }
@@ -70,7 +70,7 @@ function checkGuess () {
     }
 
     
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 20; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]

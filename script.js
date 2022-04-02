@@ -157,7 +157,7 @@ document.addEventListener("keyup", (e) => {
 
     if (pressedKey === "Enter") {
         checkGuess()
-        document.getElementById("rightguessString").innerHTML = currentGuess
+        document.getElementById("rightguessString").innerHTML = string(currentGuess)
         return
     }
 

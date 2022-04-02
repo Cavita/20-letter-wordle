@@ -48,8 +48,8 @@ function checkGuess () {
         toastr.error("Not enough letters!")
         return
     }
-    
-    console.log(guessString)
+
+    document.getElementById("rightguessString").innerHTML = guessString
 
     for (let i = 0; i < 20; i++) {
         let letterColor = ''

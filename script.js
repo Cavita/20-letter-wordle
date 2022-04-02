@@ -40,6 +40,8 @@ function checkGuess () {
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)
 
+    document.getElementById("guessString").innerHTML = guessString
+    
     for (const val of currentGuess) {
         guessString += val
     }
@@ -49,7 +51,7 @@ function checkGuess () {
         return
     }
     
-    for (let i = 1; i < 21; i++) {
+    for (let i = 0; i < 21; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]

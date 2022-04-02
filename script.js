@@ -28,14 +28,6 @@ function initBoard() {
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
-            let oldColor = elem.style.backgroundColor
-            if (oldColor === 'green') {
-                return
-            } 
-
-            if (oldColor === 'yellow' && color !== 'green') {
-                return
-            }
 
             elem.style.backgroundColor = color
             break
@@ -56,12 +48,6 @@ function checkGuess () {
         toastr.error("Not enough letters!")
         return
     }
-
-    if (!WORDS.includes(guessString)) {
-        //toastr.error("Word not in list!")
-        //return
-    }
-
     
     for (let i = 0; i < 20; i++) {
         let letterColor = ''
@@ -117,15 +103,15 @@ function insertLetter (pressedKey) {
     if (nextLetter === 20) {
         return
     }
-    pressedKey = pressedKey.toLowerCase()
-
-    let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
-    let box = row.children[nextLetter]
-    animateCSS(box, "pulse")
-    box.textContent = pressedKey
-    box.classList.add("filled-box")
-    currentGuess.push(pressedKey)
-    nextLetter += 1
+    
+    pressedKey = pressedKey.toLowerCase();
+    let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
+    let box = row.children[nextLetter];
+    animateCSS(box, "pulse");
+    box.textContent = pressedKey;
+    box.classList.add("filled-box");
+    currentGuess.push(pressedKey);
+    nextLetter += 1;
 }
 
 function deleteLetter () {

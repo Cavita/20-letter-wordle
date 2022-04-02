@@ -35,10 +35,7 @@ function shadeKeyBoard(letter, color) {
                 if (letterColor === "yellow"){
                     return
                 }
-            } else {
-                elem.style.backgroundColor = "grey"
-            }
-            
+            } 
         }
     }
 };
@@ -72,7 +69,7 @@ function checkGuess() {
             } else {
                 letterColor = 'yellow'
             }
-            
+
         }  
 
         let delay = 350 * i

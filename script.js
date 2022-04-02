@@ -47,7 +47,8 @@ function shadeKeyBoard(letter, color) {
 function checkGuess() {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
-    let rightGuess = Array.from(rightGuessString)
+    let answerString = rightGuessString.toLowerCase()
+    let rightGuess = Array.from(answerString)
 
     for (const val of currentGuess) {
         guessString += val
@@ -85,10 +86,9 @@ function checkGuess() {
             shadeKeyBoard(letter, letterColor)
         }, delay)
         
-        toastr.info(guessString)
     }
 
-    if (guessString === rightGuessString) {
+    if (guessString.toLowerCase() === rightGuessString.toLowerCase()) {
         toastr.success("You guessed right!")
         guessesRemaining = 0
         return
@@ -102,6 +102,10 @@ function checkGuess() {
             toastr.info(`The right word was: "${rightGuessString}"`)
         }
     }
+
+    console.log(answerString)
+    console.log(guessString)
+    console.log(currentGuess)
 };
 
 function insertLetter(pressedKey) {

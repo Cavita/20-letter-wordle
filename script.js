@@ -53,8 +53,8 @@ function checkGuess() {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]
-        
-        let letterPosition = rightGuess.indexOf(currentGuess[i])
+        let letterPosition = rightGuess.indexOf(currentGuess[i]) - 1
+
         //checks if letter is in the word. Greys out box if not found.
         if (letterPosition === -1) {
                 letterColor = 'grey'

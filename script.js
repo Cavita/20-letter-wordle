@@ -51,7 +51,6 @@ function checkGuess() {
 
     for (const val of currentGuess) {
         guessString += val
-        toastr.info(guessString)
     }
 
     if (guessString.length != 20) {
@@ -85,6 +84,8 @@ function checkGuess() {
             box.style.backgroundColor = letterColor
             shadeKeyBoard(letter, letterColor)
         }, delay)
+        
+        toastr.info(guessString)
     }
 
     if (guessString === rightGuessString) {

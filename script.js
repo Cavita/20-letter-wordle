@@ -4,7 +4,7 @@ const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
+let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 function initBoard() {
     document.getElementById("rightguessString").innerHTML = rightGuessString
@@ -23,7 +23,7 @@ function initBoard() {
 
         board.appendChild(row)
     }
-}
+};
 
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
@@ -41,7 +41,7 @@ function shadeKeyBoard(letter, color) {
             
         }
     }
-}
+};
 
 function checkGuess() {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
@@ -100,7 +100,7 @@ function checkGuess() {
             toastr.info(`The right word was: "${rightGuessString}"`)
         }
     }
-}
+};
 
 function insertLetter(pressedKey) {
     if (nextLetter === 20) {
@@ -115,7 +115,7 @@ function insertLetter(pressedKey) {
     box.classList.add("filled-box");
     currentGuess.push(pressedKey);
     nextLetter += 1;
-}
+};
 
 function deleteLetter() {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
@@ -124,7 +124,7 @@ function deleteLetter() {
     box.classList.remove("filled-box")
     currentGuess.pop()
     nextLetter -= 1
-}
+};
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
@@ -169,7 +169,7 @@ document.addEventListener("keyup", (e) => {
     } else {
         insertLetter(pressedKey)
     }
-})
+});
 
 document.getElementById("keyboard-cont").addEventListener("click", (e) => {
     const target = e.target
@@ -184,6 +184,6 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
     } 
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
-})
+});
 
 initBoard();

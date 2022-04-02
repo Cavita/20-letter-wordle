@@ -158,5 +158,5 @@ export const WORDS = [
     'Underrepresentations',
     'Unintelligiblenesses',
     'Unrepresentativeness',
-    'Unsatisfactorinesses',
+    'Unsatisfactorinesses'
 ]

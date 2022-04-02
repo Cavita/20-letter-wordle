@@ -30,7 +30,7 @@ function shadeKeyBoard(letter, color) {
         if (elem.textContent === letter) {
 
             elem.style.backgroundColor = color
-            break
+            
         }
     }
 }
@@ -49,7 +49,7 @@ function checkGuess () {
         return
     }
 
-    for (let i = 0; guessString.length; i++) {
+    for (i = 0; guessString.length; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]

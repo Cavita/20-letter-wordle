@@ -72,8 +72,7 @@ function checkGuess() {
             } else {
                 letterColor = 'yellow'
             }
-
-            rightGuess[letterPosition] = "#"
+            
         }  
 
         let delay = 350 * i

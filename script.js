@@ -58,8 +58,8 @@ function checkGuess () {
     }
 
     if (!WORDS.includes(guessString)) {
-        toastr.error("Word not in list!")
-        return
+        //toastr.error("Word not in list!")
+        //return
     }
 
     

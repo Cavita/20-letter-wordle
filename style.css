@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-  }
+}
   
-  .letter-box {
-    border: 2px solid gray;
+.letter-box {
+    border: 2px solid black;
     border-radius: 3px;
     margin: 2px;
     font-size: 2.5rem;
@@ -16,12 +16,12 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-  }
+}
   
-  .filled-box {
+.filled-box {
     border: 2px solid black;
-  }
+}
   
-  .letter-row {
+.letter-row {
     display: flex;
-  }
+}
